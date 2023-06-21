@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ClientApp\node_modules\devextreme-angular\**" />
+    <Content Remove="ClientApp\node_modules\devextreme-angular\**" />
+    <EmbeddedResource Remove="ClientApp\node_modules\devextreme-angular\**" />
+    <None Remove="ClientApp\node_modules\devextreme-angular\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
@@ -34,6 +41,10 @@
     <Content Update="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\node_modules\" />
   </ItemGroup>
 
 </Project>
